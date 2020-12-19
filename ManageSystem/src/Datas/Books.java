@@ -124,13 +124,13 @@ public class Books implements Serializable {
     }
 
     @SuppressWarnings("unchecked")
-    public static Books exist(String name){
+    public static Books exist(String nameOrISBN){
         try {
             FileInputStream fileInputStream = new FileInputStream(src);
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
             Set<Books> booksSet = (Set<Books>) objectInputStream.readObject();
             for (Books value : booksSet){
-                if (value.name.equals(name) || value.ISBN.equals(name)){
+                if (value.name.equals(nameOrISBN) || value.ISBN.equals(nameOrISBN)){
                     return value;
                 }
             }
