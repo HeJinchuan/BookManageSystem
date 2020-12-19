@@ -132,7 +132,7 @@ public class FirstPage {
         jScrollPane2.setBounds(new Rectangle(5,425,1000,355));
 
         JButton save = new JButton("保存");
-        save.setBounds(new Rectangle(900,782,100,15));
+        save.setBounds(new Rectangle(900,782,100,18));
         try{
             String s = "";
             String string ;
